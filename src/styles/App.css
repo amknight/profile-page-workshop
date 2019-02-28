@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  background-color: rgb(185, 202, 218);
+}
+
+.App-pane {
+  margin-right: 15%;
+  margin-left: 15%;
+  font-size: calc(10px + 2vmin);
+  color: #2e3035;
+  padding: 10px 0px;
+}
+
