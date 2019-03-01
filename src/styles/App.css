@@ -1,14 +1,16 @@
-.App {
-  text-align: center;
-  min-height: 100vh;
-  background-color: rgb(185, 202, 218);
+#root {
+  background-image: linear-gradient(to bottom, #e3e3e3, #f8f8f8);
+  height: 100vh;
 }
 
-.App-pane {
-  margin-right: 15%;
-  margin-left: 15%;
-  font-size: calc(10px + 2vmin);
-  color: #2e3035;
+.App {
+  text-align: center;
+  font-size: calc(12px + 2vmin);
+  background-color: #ffffff;
   padding: 10px 0px;
+  position: fixed;
+  top: 10%; bottom: 10%; left: 5%; right: 5%;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.15);;
+  border-radius: 8px;
 }
 

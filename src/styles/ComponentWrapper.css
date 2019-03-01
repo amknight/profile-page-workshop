@@ -1,7 +1,6 @@
 .border-wrapper {
-  background-color: whitesmoke;
-  border: 1px solid rgb(64, 70, 70);
-  padding: 15px 10px;
-  margin: 5px 0px;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  margin: 20px;
 }
