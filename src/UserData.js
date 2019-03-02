@@ -10,21 +10,53 @@ export default
   twitter: "jonno",
   details: {
     // Using strings as keys since some of the keys have spaces.
-    "Interests": [
+    "💡 Interests": [
+      {
+        name: "Sorbet",
+        description: "I like Sorbet"
+      },
+      {
+        name: "Sorbet",
+        description: "I like SorbetI like SorbetI like Sorbet"
+      },
+      {
+        name: "Sorbet",
+        description: "I like SorbetI like SorbetI like SorbetI like SorbetI like SorbetI like SorbetI like Sorbet"
+      },
+      {
+        name: "Sorbet",
+        description: "I like SorbetI like Sorbet"
+      },
+      {
+        name: "Sorbet",
+        description: "I like Sorbet"
+      },
+      {
+        name: "Sorbet",
+        description: "I like Sorbet"
+      },
+      {
+        name: "Sorbet",
+        description: "I like SorbetI like Sorbet"
+      },
+      {
+        name: "Sorbet",
+        description: "I like Sorbet"
+      },
       {
         name: "Sorbet",
         description: "I like Sorbet"
       }
     ],
-    "Skills": [
+    "🛠 Skills": [
       {
         name: "C++",
-        startYear: "2015",
+        dateRange: "2015",
         endYear: "Now",
         description: "nbbbdsf"
       }
     ],
-    "Education": [
+    "📚Education": [
       {
         name: "C++",
         startYear: "2015",
@@ -38,7 +70,7 @@ export default
         description: "aaaa"
       }
     ],
-    "Work History": [
+    "🌏Work History": [
       {
         name: "Atlassian",
         startYear: "2016",

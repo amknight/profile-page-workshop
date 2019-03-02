@@ -1,0 +1,37 @@
+.profile-card {
+  border-radius: 8px;
+  background-color: #ad3a3a;
+  padding: 24px 32px;
+  font-family: Poppins;
+  color: #ffc0c0;
+  margin: 0 10px 24px;
+}
+
+.profile-card .card-header {
+  font-family: Poppins;
+  font-size: calc(16px + 2vmin);
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 5.3px;
+}
+
+.profile-card .card-dates {
+  font-size: calc(8px + 2vmin);
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+}
+
+.profile-card .card-description {
+  font-size: calc(10px + 2vmin);
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: 1.3px;
+  margin-top: 16px;
+}

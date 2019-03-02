@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import profilePicture from '../assets/profile.png';
-import '../styles/Header.css';
+import '../styles/ProfileHeader.css';
 
-class Header extends Component {
+class ProfileHeader extends Component {
   defaultsProps = {
     firstName: "",
     lastName: "",
@@ -25,11 +25,11 @@ class Header extends Component {
   }
 }
 
-Header.propTypes = {
+ProfileHeader.propTypes = {
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
   twitter: PropTypes.string.isRequired
 }
 
-export default Header;
+export default ProfileHeader;

@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../../styles/Tabs.css';
-
 import Tab from './Tab';
-
-// Taken from https://alligator.io/react/tabs-component/
+import Masonry from 'react-masonry-css'
 
 class Tabs extends Component {
   static propTypes = {
-    children: PropTypes.instanceOf(Array).isRequired,
+    tabList: PropTypes.instanceOf(Array).isRequired,
+    tabContent: PropTypes.instanceOf(Array).isRequired,
   }
 
   constructor(props) {
     super(props);
 
     this.state = {
-      activeTab: this.props.children[0].props.label,
+      activeTab: this.props.tabList[0],
     };
   }
 
@@ -27,35 +26,47 @@ class Tabs extends Component {
     const {
       onClickTabItem,
       props: {
-        children,
+        tabList,
+        tabContent
       },
       state: {
         activeTab,
       }
     } = this;
 
+    const tabContentElements = tabContent.reduce(
+      (result, contentElement) => {
+        if (contentElement.props.label === activeTab) {
+          result.push(contentElement);
+        }
+        return result;
+      }, []);
+
+    const numTabContentElements = tabContentElements.length;
+
+    const breakpointColumnsObj = {
+      default: 3,
+      1100: 2,
+      700: 1
+    };
+
     return (
       <div className="tabs">
         <ol className="tab-list">
-          {children.map((child) => {
-            const { label } = child.props;
-
+          {tabList.map((tabHeader) => {
             return (
               <Tab
                 activeTab={activeTab}
-                key={label}
-                label={label}
+                key={tabHeader}
+                label={tabHeader}
                 onClick={onClickTabItem}
               />
             );
           })}
         </ol>
-        <div className="tab-content">
-          {children.map((child) => {
-            if (child.props.label !== activeTab) return undefined;
-            return child.props.children;
-          })}
-        </div>
+        <Masonry className="tab-content" columnClassName="tab-content-columns" breakpointCols={breakpointColumnsObj}>
+          {tabContentElements}
+        </Masonry>
       </div>
     );
   }
