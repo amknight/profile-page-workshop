@@ -2,58 +2,48 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import '../../styles/Tabs.css';
 import Tab from './Tab';
-import Masonry from 'react-masonry-css'
+import Masonry from 'react-masonry-css';
 
 class Tabs extends Component {
   static propTypes = {
-    tabList: PropTypes.instanceOf(Array).isRequired,
-    tabContent: PropTypes.instanceOf(Array).isRequired,
-  }
+    tabData: PropTypes.instanceOf(Object).isRequired,
+  };
 
   constructor(props) {
     super(props);
 
+    this.tabHeaders = Object.keys(this.props.tabData);
+
     this.state = {
-      activeTab: this.props.tabList[0],
+      activeTab: this.tabHeaders[0]
     };
   }
 
-  onClickTabItem = (tab) => {
+  onClickTabItem = tab => {
     this.setState({ activeTab: tab });
-  }
+  };
 
   render() {
     const {
       onClickTabItem,
-      props: {
-        tabList,
-        tabContent
-      },
-      state: {
-        activeTab,
-      }
+      props: { tabData },
+      state: { activeTab }
     } = this;
 
-    const tabContentElements = tabContent.reduce(
-      (result, contentElement) => {
-        if (contentElement.props.label === activeTab) {
-          result.push(contentElement);
-        }
-        return result;
-      }, []);
+    // We only want to render the content for the currently active tab, so filter out content that is not relevant
+    const tabContentElements = tabData[activeTab];
 
-    const numTabContentElements = tabContentElements.length;
-
+    // Defines that number of columns for certain browser widths
     const breakpointColumnsObj = {
       default: 3,
-      1100: 2,
-      700: 1
+      1200: 2,
+      900: 1
     };
 
     return (
       <div className="tabs">
         <ol className="tab-list">
-          {tabList.map((tabHeader) => {
+          {Object.keys(tabData).map(tabHeader => {
             return (
               <Tab
                 activeTab={activeTab}
@@ -64,7 +54,11 @@ class Tabs extends Component {
             );
           })}
         </ol>
-        <Masonry className="tab-content" columnClassName="tab-content-columns" breakpointCols={breakpointColumnsObj}>
+        <Masonry
+          className="tab-content"
+          columnClassName="tab-content-columns"
+          breakpointCols={breakpointColumnsObj}
+        >
           {tabContentElements}
         </Masonry>
       </div>

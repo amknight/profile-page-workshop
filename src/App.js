@@ -7,7 +7,7 @@ import ProfileBody from './components/ProfileBody';
 class App extends Component {
   state = {
     userData: userData
-  }
+  };
 
   render() {
     return (

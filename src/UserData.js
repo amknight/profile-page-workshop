@@ -56,7 +56,7 @@ export default
         description: "nbbbdsf"
       }
     ],
-    "📚Education": [
+    "📚 Education": [
       {
         name: "C++",
         startYear: "2015",
@@ -70,7 +70,7 @@ export default
         description: "aaaa"
       }
     ],
-    "🌏Work History": [
+    "🌏 Work History": [
       {
         name: "Atlassian",
         startYear: "2016",

@@ -5,11 +5,11 @@ import '../styles/ProfileHeader.css';
 
 class ProfileHeader extends Component {
   defaultsProps = {
-    firstName: "",
-    lastName: "",
-    website: "",
-    twitter: ""
-  }
+    firstName: '',
+    lastName: '',
+    website: '',
+    twitter: ''
+  };
 
   render() {
     return (
@@ -30,6 +30,6 @@ ProfileHeader.propTypes = {
   lastName: PropTypes.string.isRequired,
   website: PropTypes.string.isRequired,
   twitter: PropTypes.string.isRequired
-}
+};
 
 export default ProfileHeader;
