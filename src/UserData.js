@@ -13,22 +13,27 @@ export default
     "💡 Interests": [
       {
         name: "Sorbet",
+        dateRange: "2014 - 2015",
         description: "I like Sorbet"
       },
       {
         name: "Sorbet",
+        dateRange: "2015 - 2016",
         description: "I like SorbetI like SorbetI like Sorbet"
       },
       {
         name: "Sorbet",
+        dateRange: "2016 - 2017",
         description: "I like SorbetI like SorbetI like SorbetI like SorbetI like SorbetI like SorbetI like Sorbet"
       },
       {
         name: "Sorbet",
+        dateRange: "2017 - 2018",
         description: "I like SorbetI like Sorbet"
       },
       {
         name: "Sorbet",
+        dateRange: "2018 - Now",
         description: "I like Sorbet"
       },
       {
