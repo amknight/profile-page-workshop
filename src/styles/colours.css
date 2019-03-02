@@ -1,0 +1,13 @@
+.dark {
+  --inner-bg-colour: #1e1e1e;
+  --outer-bg-image: linear-gradient(to bottom, #464646, #6f6f6f);
+  --tab-list-active: #5e5e5e;
+  --header-text: #ffffff;
+}
+
+.light {
+  --inner-bg-colour: #ffffff;
+  --outer-bg-image: linear-gradient(to bottom, #e3e3e3, #f8f8f8);
+  --tab-list-active: #2a18b8;
+  --header-text: #2a18b8;
+}

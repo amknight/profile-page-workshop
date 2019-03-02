@@ -1,5 +1,8 @@
+@import "colours.css";
+
 .profile-header {
   margin-bottom: 70px;
+  color: var(--header-text);
 }
 
 .profile-picture {
@@ -19,7 +22,6 @@
   font-stretch: normal;
   line-height: normal;
   letter-spacing: 12px;
-  color: #2a18b8;
   margin-bottom: 16px;
 }
 
@@ -31,7 +33,6 @@
   font-stretch: normal;
   line-height: normal;
   letter-spacing: 3px;
-  color: #2a18b8;
   margin-bottom: 24px;
 }
 
@@ -43,5 +44,4 @@
   font-stretch: normal;
   line-height: normal;
   letter-spacing: 1.5px;
-  color: #675db8;
 }

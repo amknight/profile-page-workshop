@@ -6,14 +6,24 @@ import ProfileBody from './components/ProfileBody';
 
 class App extends Component {
   state = {
-    userData: userData
+    userData: userData,
+    isDarkMode: false
   };
 
+  toggleDarkMode() {
+    const currentDarkModeState = this.state.isDarkMode;
+    this.setState({ isDarkMode: !currentDarkModeState });
+  }
+
   render() {
+    const darkModeClass = this.state.isDarkMode ? 'dark' : 'light';
+
     return (
-      <div className="App">
-        <ProfileHeader {...this.state.userData} />
-        <ProfileBody {...this.state.userData.details} />
+      <div className={'App-wrapper ' + darkModeClass}>
+        <div className="App">
+          <ProfileHeader {...this.state.userData} />
+          <ProfileBody {...this.state.userData.details} />
+        </div>
       </div>
     );
   }
