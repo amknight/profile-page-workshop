@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 import userData from './UserData.js';
-import ProfileHeader from './components/ProfileHeader';
-import ProfileBody from './components/ProfileBody';
+import ProfileHeader from './components/ProfileHeader.js';
+import ProfileBody from './components/ProfileBody.js';
+import DarkModeToggle from './components/DarkModeToggle.js';
 
 class App extends Component {
   state = {
@@ -21,6 +22,8 @@ class App extends Component {
     return (
       <div className={'App-wrapper ' + darkModeClass}>
         <div className="App">
+          {/* Must bind the function to this context before passing as props to component, see: https://reactjs.org/docs/faq-functions.html */}
+          <DarkModeToggle isDarkMode={this.state.isDarkMode} toggleDarkMode={this.toggleDarkMode.bind(this)}></DarkModeToggle>
           <ProfileHeader {...this.state.userData} />
           <ProfileBody {...this.state.userData.details} />
         </div>

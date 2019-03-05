@@ -1,0 +1,27 @@
+@import "colours.css";
+
+.darkModeToggle {
+  position: absolute;
+  right: calc(5% + 72px);
+}
+
+.darkModeToggleButton {
+  color: var(--darkmode-toggle-button);
+  margin-right: 5px;
+}
+
+.darkModeToggle:hover {
+  cursor: pointer;
+}
+
+.darkModetoggleText {
+  color: var(--darkmode-toggle-text);
+}
+/* .darkModeToggleButton {
+  display: inline-block;
+  background-color: var(--darkmode-toggle-button);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+} */
+

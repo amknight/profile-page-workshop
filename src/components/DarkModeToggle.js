@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import profilePicture from '../assets/profile.png';
-import '../styles/ProfileHeader.css';
+import '../styles/DarkModeToggle.css';
 
-class ProfileHeader extends Component {
+class DarkModeToggle extends Component {
   defaultsProps = {
-      
+      isDarkMode: false
   };
+
+  handleClick() {
+    this.props.toggleDarkMode && this.props.toggleDarkMode();
+  }
 
   render() {
     return (
-      <div>
-        <button className="darkModeButton" ></button>
-
+      <div className="darkModeToggle" onClick={this.handleClick.bind(this)}>
+        <span className="darkModeToggleButton">●</span>
+        <span className="darkModetoggleText">Dark mode {this.props.isDarkMode ? 'on' : 'off'}</span>
       </div>
     );
   }
 }
 
-ProfileHeader.propTypes = {
-  firstName: PropTypes.string.isRequired,
-  lastName: PropTypes.string.isRequired,
-  website: PropTypes.string.isRequired,
-  twitter: PropTypes.string.isRequired
+DarkModeToggle.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  toggleDarkMode: PropTypes.func.isRequired
 };
 
-export default ProfileHeader;
+export default DarkModeToggle;
