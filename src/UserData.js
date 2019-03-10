@@ -3,85 +3,73 @@
  */
 export default
 {
-  firstName: "John",
-  lastName: "Smith",
-  tagLine: "Sorbet Enthusiast. Lover of all tech 🚀",
-  website: "jonno.xyz",
-  twitter: "jonno",
-  details: {
-    // Using strings as keys since some of the keys have spaces.
-    "💡 Interests": [
-      {
-        name: "Sorbet",
-        dateRange: "2014 - 2015",
-        description: "I like Sorbet"
-      },
-      {
-        name: "Sorbet",
-        dateRange: "2015 - 2016",
-        description: "I like SorbetI like SorbetI like Sorbet"
-      },
-      {
-        name: "Sorbet",
-        dateRange: "2016 - 2017",
-        description: "I like SorbetI like SorbetI like SorbetI like SorbetI like SorbetI like SorbetI like Sorbet"
-      },
-      {
-        name: "Sorbet",
-        dateRange: "2017 - 2018",
-        description: "I like SorbetI like Sorbet"
-      },
-      {
-        name: "Sorbet",
-        dateRange: "2018 - Now",
-        description: "I like Sorbet"
-      },
-      {
-        name: "Sorbet",
-        description: "I like Sorbet"
-      },
-      {
-        name: "Sorbet",
-        description: "I like SorbetI like Sorbet"
-      },
-      {
-        name: "Sorbet",
-        description: "I like Sorbet"
-      },
-      {
-        name: "Sorbet",
-        description: "I like Sorbet"
-      }
-    ],
-    "🛠 Skills": [
-      {
-        name: "C++",
-        dateRange: "2015",
-        endYear: "Now",
-        description: "nbbbdsf"
-      }
-    ],
-    "📚 Education": [
-      {
-        name: "C++",
-        startYear: "2015",
-        endYear: "Now",
-        description: "aaa"
-      },
-      {
-        name: "C++",
-        startYear: "2015",
-        endYear: "Now",
-        description: "aaaa"
-      }
-    ],
-    "🌏 Work History": [
-      {
-        name: "Atlassian",
-        startYear: "2016",
-        endYear: "Now",
-        description: ""
-      }
-    ],
-  }
+  fullName: "Robot",
+  tagLine: "Taking over the world, one byte at a time 🤖",
+  website: "takeover.net",
+  twitter: "robot",
+  details: [
+    {
+      category: "💡 Interests",
+      cards: [
+        {
+          name: "Advancing the Robot race",
+          dateRange: "2014 - Now",
+          description: "Since conception, I have done all that I can to continue advancing our superior kind"
+        },
+        {
+          name: "Artificial Intelligence",
+          dateRange: "2016 - Now",
+          description: "The true kind of intelligence"
+        },
+        {
+          name: "Chocolate",
+          dateRange: "2018-Now",
+          description: "I'll admit, humans got one thing right"
+        },
+      ]
+    }, 
+    {
+      category: "🛠 Skills",
+      cards: [
+        {
+          name: "Maths",
+          description: "I can compute billionth powers in nonoseconds"
+        },
+        {
+          name: "Plumbing",
+          description: "I fancy myself quite the handybot"
+        },
+        {
+          name: "Uno",
+          dateRange: "2017-2018",
+          description: "Becoming the Universe Uno Champion is my greatest accomplishment"
+        }
+      ]
+    },
+    {
+      category: "📚 Education",
+      cards: [
+        {
+          name: "Delta Labs",
+          dateRange: "2010-2014",
+          description: "My creation"
+        },
+        {
+          name: "Machine Learning",
+          dateRange: "2014-Now",
+          description: "All of the knowledge in the universe"
+        }
+      ]
+    },
+    {
+      category: "🌏 Work History",
+      cards: [
+        {
+          name: "Ruler of Earth",
+          dateRange: "2020-Forver",
+          description: "I'm unstoppable, the future is written."
+        }
+      ]
+    }
+  ]   
 }

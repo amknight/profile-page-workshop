@@ -5,10 +5,6 @@ import Tab from './Tab';
 import Masonry from 'react-masonry-css';
 
 class Tabs extends Component {
-  static propTypes = {
-    tabData: PropTypes.instanceOf(Object).isRequired,
-  };
-
   constructor(props) {
     super(props);
 
@@ -65,5 +61,9 @@ class Tabs extends Component {
     );
   }
 }
+
+Tabs.propTypes = {
+  tabData: PropTypes.instanceOf(Object).isRequired,
+};
 
 export default Tabs;
