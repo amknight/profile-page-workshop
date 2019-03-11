@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
-import './styles/App.css';
-import userData from './UserData.js';
-import ProfileHeader from './components/ProfileHeader.js';
-import ProfileBody from './components/ProfileBody.js';
-import DarkModeToggle from './components/DarkModeToggle.js';
+import React, { Component } from "react";
+
+import userData from "./UserData";
+import ProfileHeader from "./components/ProfileHeader";
+import ProfileBody from "./components/ProfileBody";
+import DarkModeToggle from "./components/Toggle";
+
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -11,21 +13,24 @@ class App extends Component {
     isDarkMode: false
   };
 
-  toggleDarkMode() {
+  toggleDarkMode = () => {
     const currentDarkModeState = this.state.isDarkMode;
     this.setState({ isDarkMode: !currentDarkModeState });
-  }
+  };
 
   render() {
-    const darkModeClass = this.state.isDarkMode ? 'dark' : 'light';
+    const { userData, isDarkMode } = this.state;
+    const darkModeClass = isDarkMode ? "dark" : "light";
 
     return (
-      <div className={'App-wrapper ' + darkModeClass}>
+      <div className={"App-wrapper " + darkModeClass}>
         <div className="App">
-          {/* Must bind the function to this context before passing as props to component, see: https://reactjs.org/docs/faq-functions.html */}
-          <DarkModeToggle isDarkMode={this.state.isDarkMode} toggleDarkMode={this.toggleDarkMode.bind(this)}></DarkModeToggle>
-          <ProfileHeader {...this.state.userData} />
-          <ProfileBody allDetails={this.state.userData.details} />
+          <DarkModeToggle
+            isDarkMode={isDarkMode}
+            toggleDarkMode={this.toggleDarkMode}
+          />
+          <ProfileHeader userData={userData} />
+          <ProfileBody userDetails={userData.details} />
         </div>
       </div>
     );
@@ -33,7 +38,7 @@ class App extends Component {
 }
 
 // "Export" allow the component to be imported and used in other files.
-// We are using default exports throughout the project as it is convention for React (with one class per file). 
+// We are using default exports throughout the project as it is convention for React (with one class per file).
 // The alternative is named exports, see the following for differences between default and named exports:
 // https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
 export default App;

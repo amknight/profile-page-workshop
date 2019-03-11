@@ -1,4 +1,4 @@
-@import "colours.css";
+@import "../../styles/colours.css";
 
 .tabs {
   display: flex;
@@ -10,16 +10,24 @@
   padding-left: 0;
   display: inline-block;
   height: 100%;
+  margin: 0;
   margin-right: 75px;
   order: 0;
+  width: 240px;
 }
 
 .tab-list-item {
   list-style: none;
-  margin-bottom: -1px;
-  padding: 8px 12px;
+  border-radius: 8px;
+  padding: 16px 12px;
+  font-size: 16px;
   letter-spacing: 3px;
   color: #949494;
+  transition: all 0.3s ease-in-out;
+}
+.tab-list-item:hover {
+  cursor: pointer;
+  opacity: 0.25;
 }
 
 .tab-list-active {
