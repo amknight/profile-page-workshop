@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import './styles/App.css';
 import userData from './UserData.js';
 import ProfileHeader from './components/ProfileHeader.js';
+import ProfileBody from './components/ProfileBody';
 
 class App extends Component {
   state = {
-    userData: userData,
+    userData: userData
   };
 
   render() {
@@ -13,7 +14,7 @@ class App extends Component {
       <div className={'App-wrapper light'}>
         <div className="App">
           <ProfileHeader {...this.state.userData} />
-          {/* ProfileBody takes a prop "allDetails" which is an array of the "details" objects (see UserData.js) /> */}
+          <ProfileBody allDetails={this.state.userData.details} />
         </div>
       </div>
     );
