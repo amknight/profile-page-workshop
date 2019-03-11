@@ -32,8 +32,8 @@ class Tabs extends Component {
     // Defines that number of columns for certain browser widths
     const breakpointColumnsObj = {
       default: 3,
-      1200: 2,
-      900: 1
+      1265: 2,
+      985: 1
     };
 
     return (
