@@ -1,5 +1,3 @@
-@import "../../styles/colours.css";
-
 .profile-card {
   border-radius: 8px;
   background-color: #ad3a3a;
@@ -17,6 +15,7 @@
   text-transform: uppercase;
   padding-top: 8px;
   padding-bottom: 8px;
+  color: white;
 }
 
 .profile-card .card-dates {

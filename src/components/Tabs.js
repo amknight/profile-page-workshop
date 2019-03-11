@@ -4,14 +4,12 @@ import PropTypes from "prop-types";
 import Tab from "./Tab";
 import Masonry from "react-masonry-css";
 
-import "./styles.css";
+import "./Tabs.css";
 
 class Tabs extends Component {
   constructor(props) {
     super(props);
-
     this.tabHeaders = Object.keys(this.props.tabData);
-
     this.state = {
       activeTab: this.tabHeaders[0]
     };

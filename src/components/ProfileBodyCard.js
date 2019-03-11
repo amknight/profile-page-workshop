@@ -1,18 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import "./styles.css";
+import "./ProfileBodyCard.css";
 
 class ProfileBodyCard extends Component {
-  static defaultProps = {
-    label: "",
-    card: {
-      name: "",
-      dateRange: "",
-      description: ""
-    }
-  };
-
   render() {
     const { category, card } = this.props;
 
