@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import '../styles/DarkModeToggle.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+
+import "./styles.css";
 
 class DarkModeToggle extends Component {
   defaultsProps = {
-      isDarkMode: false
+    isDarkMode: false
   };
 
-  handleClick() {
+  handleClick = () => {
     this.props.toggleDarkMode && this.props.toggleDarkMode();
-  }
+  };
 
   render() {
     return (
-      <div className="darkModeToggle" onClick={this.handleClick.bind(this)}>
+      <div className="darkModeToggle" onClick={this.handleClick}>
         <span className="darkModeToggleButton">●</span>
-        <span className="darkModetoggleText">Dark mode {this.props.isDarkMode ? 'on' : 'off'}</span>
+        <span className="darkModetoggleText">
+          Dark mode {this.props.isDarkMode ? "on" : "off"}
+        </span>
       </div>
     );
   }

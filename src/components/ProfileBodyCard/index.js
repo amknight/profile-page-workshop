@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+
+import "./styles.css";
 
 class ProfileBodyCard extends Component {
   static defaultProps = {
-    label: '',
+    label: "",
     card: {
-      name: '',
-      dateRange: '',
-      description: ''
+      name: "",
+      dateRange: "",
+      description: ""
     }
   };
 
   render() {
-    const { category, card} = this.props;
+    const { category, card } = this.props;
 
     return (
       <div label={category} className="profile-card">

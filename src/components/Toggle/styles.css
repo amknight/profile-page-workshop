@@ -1,4 +1,4 @@
-@import "colours.css";
+@import "../../styles/colours.css";
 
 .darkModeToggle {
   position: absolute;
@@ -24,4 +24,3 @@
   width: 12px;
   height: 12px;
 } */
-

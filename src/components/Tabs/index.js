@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import '../../styles/Tabs.css';
-import Tab from './Tab';
-import Masonry from 'react-masonry-css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+
+import Tab from "./Tab";
+import Masonry from "react-masonry-css";
+
+import "./styles.css";
 
 class Tabs extends Component {
   constructor(props) {
@@ -63,7 +65,7 @@ class Tabs extends Component {
 }
 
 Tabs.propTypes = {
-  tabData: PropTypes.instanceOf(Object).isRequired,
+  tabData: PropTypes.instanceOf(Object).isRequired
 };
 
 export default Tabs;
