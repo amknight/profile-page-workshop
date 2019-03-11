@@ -5,6 +5,7 @@ import ProfileHeader from "./components/ProfileHeader";
 import ProfileBody from "./components/ProfileBody";
 import DarkModeToggle from "./components/Toggle";
 
+import './styles/colours.css';
 import "./App.css";
 
 class App extends Component {
