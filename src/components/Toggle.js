@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import "./styles.css";
+import "./Toggle.css";
 
 class DarkModeToggle extends Component {
-  defaultsProps = {
-    isDarkMode: false
-  };
-
   handleClick = () => {
     this.props.toggleDarkMode && this.props.toggleDarkMode();
   };

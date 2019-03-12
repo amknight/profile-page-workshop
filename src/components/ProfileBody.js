@@ -1,14 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import Tabs from "../Tabs";
-import ProfileBodyCard from "../ProfileBodyCard";
+import Tabs from "./Tabs";
+import ProfileBodyCard from "./ProfileBodyCard";
 
 class ProfileBody extends Component {
-  static defaultProps = {
-    detailedInformation: []
-  };
-
   render() {
     // The bodyData is an object with keys as the tab heading and the value as a
     // list of all the cards associated with tab to display
