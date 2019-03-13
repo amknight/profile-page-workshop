@@ -24,6 +24,7 @@ class Tabs extends Component {
   }
 
   onClickTabItem = tab => {
+    this.setState({ activeTab: tab });
   };
 
   render() {
