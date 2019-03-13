@@ -29,9 +29,7 @@ import userData from './data/UserData.json';
     ---------------------------------------------
     Here, we start including these different parts.
 */
-import DarkModeToggle from './components/Toggle';
 import ProfileHeader from './components/ProfileHeader';
-import ProfileBody from './components/ProfileBody';
 
 /*    
     ADDING STYLE
@@ -57,31 +55,19 @@ import './App.css';
 class App extends Component {
   // (2) Setting up some initial state!
   state = {
-    userData: userData,
-    isDarkMode: false
+    userData: userData
   };
 
   /* (3) Defining functions! */
-  // (3.1) A function for dark mode.
-  toggleDarkMode = () => {
-    const currentDarkModeState = this.state.isDarkMode;
-    this.setState({ isDarkMode: !currentDarkModeState });
-  };
-
-  // (3.2) The render function!
+  // The render function!
   render() {
-    const { userData, isDarkMode } = this.state;
-    const darkModeClass = isDarkMode ? 'dark' : 'light';
+    const userData = this.state.userData;
 
     return (
-      <div className={'app-container ' + darkModeClass}>
+      <div className={'app-container light'}>
         <div className='app'>
-          <DarkModeToggle
-            isDarkMode={isDarkMode}
-            toggleDarkMode={this.toggleDarkMode}
-          />
           <ProfileHeader userData={userData} />
-          <ProfileBody userDetails={userData.details} />
+          {/* ProfileBody takes a prop "userDetails" which is an array of the "details" objects (see UserData.json) /> */}
         </div>
       </div>
     );
