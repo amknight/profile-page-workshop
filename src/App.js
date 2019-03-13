@@ -30,6 +30,7 @@ import userData from './data/UserData.json';
     Here, we start including these different parts.
 */
 import ProfileHeader from './components/ProfileHeader';
+import ProfileBody from './components/ProfileBody';
 
 /*    
     ADDING STYLE
@@ -67,7 +68,7 @@ class App extends Component {
       <div className={'app-container light'}>
         <div className='app'>
           <ProfileHeader userData={userData} />
-          {/* ProfileBody takes a prop "userDetails" which is an array of the "details" objects (see UserData.json) /> */}
+          <ProfileBody userDetails={userData.details} />
         </div>
       </div>
     );
