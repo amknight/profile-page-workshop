@@ -33,7 +33,7 @@ class ProfileBody extends Component {
 }
 
 ProfileBody.propTypes = {
-  allDetails: PropTypes.array.isRequired
+  userDetails: PropTypes.array.isRequired
 };
 
 export default ProfileBody;

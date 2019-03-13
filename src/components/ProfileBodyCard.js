@@ -24,7 +24,8 @@ class ProfileBodyCard extends Component {
 }
 
 ProfileBodyCard.propTypes = {
-  label: PropTypes.string.isRequired
+  card: PropTypes.object.isRequired,
+  category: PropTypes.string.isRequired
 };
 
 export default ProfileBodyCard;

@@ -42,10 +42,12 @@ class ProfileHeader extends Component {
 
 // React allows us to typecheck the props that we are provided
 ProfileHeader.propTypes = {
-  fullName: PropTypes.string.isRequired,
-  tagLine: PropTypes.string.isRequired,
-  website: PropTypes.string.isRequired,
-  twitter: PropTypes.string.isRequired
+  userData: PropTypes.shape({
+    fullName: PropTypes.string.isRequired,
+    tagLine: PropTypes.string.isRequired,
+    website: PropTypes.string.isRequired,
+    twitter: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default ProfileHeader;
