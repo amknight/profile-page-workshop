@@ -1,11 +1,19 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import Tab from "./Tab";
-import Masonry from "react-masonry-css";
+import Tab from './Tab';
+import Masonry from 'react-masonry-css';
 
-import "./Tabs.css";
+import './Tabs.css';
 
+/* Tabs controls the displaying of the tab list as well as the correct content
+ * for the currently selected tab from the list.
+ *
+ * Props:
+ *  tabData (Object): Object that maps the tab headings with an array of elements
+ *                    to be displayed within the tab grid.
+ *                    For example: { "Tab Header": [ <div></div> ] }
+ */
 class Tabs extends Component {
   constructor(props) {
     super(props);
@@ -20,11 +28,8 @@ class Tabs extends Component {
   };
 
   render() {
-    const {
-      onClickTabItem,
-      props: { tabData },
-      state: { activeTab }
-    } = this;
+    const tabData = this.props.tabData;
+    const activeTab = this.state.activeTab;
 
     // We only want to render the content for the currently active tab, so filter out content that is not relevant
     const tabContentElements = tabData[activeTab];
@@ -37,22 +42,21 @@ class Tabs extends Component {
     };
 
     return (
-      <div className="tabs">
-        <ol className="tab-list">
+      <div className='tabs'>
+        <ol className='tab-list'>
           {Object.keys(tabData).map(tabHeader => {
             return (
               <Tab
                 activeTab={activeTab}
-                key={tabHeader}
                 label={tabHeader}
-                onClick={onClickTabItem}
+                onClick={this.onClickTabItem}
               />
             );
           })}
         </ol>
         <Masonry
-          className="tab-content"
-          columnClassName="tab-content-columns"
+          className='tab-content'
+          columnClassName='tab-content-columns'
           breakpointCols={breakpointColumnsObj}
         >
           {tabContentElements}

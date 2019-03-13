@@ -1,9 +1,12 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import Tabs from "./Tabs";
-import ProfileBodyCard from "./ProfileBodyCard";
+import Tabs from './Tabs';
+import ProfileBodyCard from './ProfileBodyCard';
 
+/* Manipulates the profile details into a form that can be passed onto the
+ * Tab component.
+ */
 class ProfileBody extends Component {
   render() {
     // The bodyData is an object with keys as the tab heading and the value as a

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 /*  
     GIVE ME THE DATA!
@@ -11,7 +11,7 @@ import React, { Component } from "react";
     - txt file (.txt, .csv)
     The possibilities are endless!
 */
-import userData from "./data";
+import userData from './data/UserData.json';
 
 /*    
     BEGINNINGS OF A UI
@@ -29,12 +29,12 @@ import userData from "./data";
     ---------------------------------------------
     Here, we start including these different parts.
 */
-import DarkModeToggle from "./components/Toggle";
-import ProfileHeader from "./components/ProfileHeader";
-import ProfileBody from "./components/ProfileBody";
+import DarkModeToggle from './components/Toggle';
+import ProfileHeader from './components/ProfileHeader';
+import ProfileBody from './components/ProfileBody';
 
 /*    
-    STYLIN' IT UP
+    ADDING STYLE
     ------------
     The following two lines are where we include our
     CSS stylesheets for sprucin' up the page!
@@ -43,15 +43,15 @@ import ProfileBody from "./components/ProfileBody";
     -> App.css contains CSS specific to the App component
        we are currently defining in JavaScript!
 */
-import "./styles/colours.css";
-import "./App.css";
+import './styles/colours.css';
+import './App.css';
 
 /*
-    HOW WILL YOU *REACT*?
+    REACT IN ACTION
     ------------ 
-    Excusing the pun... here begins our journey in writing
-    our first React component! From top to bottom, check out 
-    the different parts of this component!
+    Here begins our journey in writing our first React 
+    component! From top to bottom, check out the different 
+    parts of this component!
 */
 // (1) Defining the React Component;
 class App extends Component {
@@ -71,11 +71,11 @@ class App extends Component {
   // (3.2) The render function!
   render() {
     const { userData, isDarkMode } = this.state;
-    const darkModeClass = isDarkMode ? "dark" : "light";
+    const darkModeClass = isDarkMode ? 'dark' : 'light';
 
     return (
-      <div className={"app-container " + darkModeClass}>
-        <div className="app">
+      <div className={'app-container ' + darkModeClass}>
+        <div className='app'>
           <DarkModeToggle
             isDarkMode={isDarkMode}
             toggleDarkMode={this.toggleDarkMode}

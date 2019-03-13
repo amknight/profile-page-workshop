@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import profilePicture from "../assets/profile.png";
+import profilePicture from '../assets/profile.png';
 
-import "./ProfileHeader.css";
+import './ProfileHeader.css';
 
 /* Renders the most important, "at a glance" information about the user.
  * Styled to be attention grabbing for the viewer
@@ -11,28 +11,28 @@ import "./ProfileHeader.css";
 class ProfileHeader extends Component {
   render() {
     const userData = this.props.userData;
-    const { fullName, tagLine, website, twitter } = userData;
+
     return (
-      <div className="profile-header">
-        <img src={profilePicture} className="profile-picture" alt="Profile" />
-        <div className="profile-name">{fullName.toUpperCase()}</div>
-        <div className="profile-tagline">{tagLine}</div>
-        <div className="profile-links">
-          🖥{" "}
+      <div className='profile-header'>
+        <img src={profilePicture} className='profile-picture' alt='Profile' />
+        <div className='profile-name'>{userData.fullName.toUpperCase()}</div>
+        <div className='profile-tagline'>{userData.tagLine}</div>
+        <div className='profile-links'>
+          🖥{' '}
           <a
-            href={"https://" + website}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={'https://' + userData.website}
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            {website}
+            {userData.website}
           </a>
           &nbsp;•&nbsp; 🐦 @
           <a
-            href={"https://twitter.com/" + twitter}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={'https://twitter.com/' + userData.twitter}
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            {twitter}
+            {userData.twitter}
           </a>
         </div>
       </div>

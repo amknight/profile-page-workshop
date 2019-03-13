@@ -10,7 +10,7 @@
   --tab-list-active: #5e5e5e;
   --header-text: #ffffff;
   --darkmode-toggle-button: #444444;
-  --darkmode-toggle-text: #cacaca
+  --darkmode-toggle-text: #cacaca;
 }
 
 .light {
@@ -19,5 +19,5 @@
   --tab-list-active: #2a18b8;
   --header-text: #2a18b8;
   --darkmode-button: #cacaca;
-  --darkmode-toggle-text: #cacaca
+  --darkmode-toggle-text: #cacaca;
 }
