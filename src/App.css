@@ -8,8 +8,7 @@
   min-height: calc(100vh - 180px);
   width: 100vw;
   display: block;
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding: 32px 0;
 }
 
 .app {
