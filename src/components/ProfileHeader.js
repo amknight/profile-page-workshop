@@ -18,7 +18,7 @@ class ProfileHeader extends Component {
         <div className='profile-name'>{userData.fullName.toUpperCase()}</div>
         <div className='profile-tagline'>{userData.tagLine}</div>
         <div className='profile-links'>
-          🖥{' '}
+          🖥&nbsp;
           <a
             href={'https://' + userData.website}
             target='_blank'
