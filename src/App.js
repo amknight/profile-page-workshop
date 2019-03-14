@@ -58,27 +58,25 @@ class App extends Component {
   // (2) Setting up some initial state!
   state = {
     userData: userData,
-    isDarkMode: false
+    currentTheme: 'light'
   };
 
   /* (3) Defining functions! */
   // (3.1) A function for dark mode.
-  toggleDarkMode = () => {
-    const currentDarkModeState = this.state.isDarkMode;
-    this.setState({ isDarkMode: !currentDarkModeState });
+  setTheme = selectedTheme => {
+    this.setState({ currentTheme: selectedTheme });
   };
 
   // (3.2) The render function!
   render() {
-    const { userData, isDarkMode } = this.state;
-    const darkModeClass = isDarkMode ? 'dark' : 'light';
+    const { userData, currentTheme } = this.state;
 
     return (
-      <div className={'app-container ' + darkModeClass}>
+      <div className={'app-container ' + currentTheme}>
         <div className='app'>
           <DarkModeToggle
-            isDarkMode={isDarkMode}
-            toggleDarkMode={this.toggleDarkMode}
+            initialTheme={this.state.currentTheme}
+            setTheme={this.setTheme}
           />
           <ProfileHeader userData={userData} />
           <ProfileBody userDetails={userData.details} />

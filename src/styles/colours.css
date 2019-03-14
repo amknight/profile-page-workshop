@@ -21,3 +21,12 @@
   --darkmode-button: #cacaca;
   --darkmode-toggle-text: #cacaca;
 }
+
+.stupid {
+  --inner-bg-colour: #40ff00;
+  --outer-bg-image: linear-gradient(to bottom, #0008ff, #0b004b);
+  --tab-list-active: #ffee00;
+  --header-text: #f904e4;
+  --darkmode-button: #cacaca;
+  --darkmode-toggle-text: #cacaca;
+}

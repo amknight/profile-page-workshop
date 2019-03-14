@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Select from 'react-select';
 import PropTypes from 'prop-types';
 
 import './Toggle.css';
@@ -12,18 +13,32 @@ import './Toggle.css';
  *                         button is pressed
  */
 class DarkModeToggle extends Component {
-  handleClick = () => {
-    this.props.toggleDarkMode && this.props.toggleDarkMode();
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOption: this.props.initialTheme
+    };
+  }
+
+  options = [
+    { value: 'light', label: 'Light' },
+    { value: 'dark', label: 'Dark' },
+    { value: 'stupid', label: 'Stupid' }
+  ];
+
+  handleChange = selectedOption => {
+    this.setState({ selectedOption });
+    this.props.setTheme(selectedOption.value);
   };
 
   render() {
     return (
-      <div className="darkModeToggle" onClick={this.handleClick}>
-        <span className="darkModeToggleButton">●</span>
-        <span className="darkModetoggleText">
-          Dark mode {this.props.isDarkMode ? 'on' : 'off'}
-        </span>
-      </div>
+      <Select
+        value={this.state.selectedOption}
+        onChange={this.handleChange}
+        options={this.options}
+        className='darkModeToggle'
+      />
     );
   }
 }
